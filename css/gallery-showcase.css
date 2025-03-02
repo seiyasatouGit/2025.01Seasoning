@@ -1,0 +1,53 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 80vh;
+    /* overflow: hidden; */
+    overflow: auto;
+
+
+    min-height: calc(100vh - 100px); /* 100pxはfooterの高さを考慮 */
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item {
+    position: relative;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.active img {
+    transform: scale(1.5);
+}

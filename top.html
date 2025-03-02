@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私の調味料辞典</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/spice-card__link.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site">
+    <header class="site__header">
+        <nav class="site__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">ホーム</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">調味料一覧</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">栄養素(ビタミン)一覧</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">素材一覧</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="site__main">
+
+
+        <div class="switch" title="Please click">
+            <p class="switch-text">背景画像<br>変更<br>ボタン</p>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero__title">私の調味料辞典</h1>
+            <p class="hero__description">香辛料や調味料のオンライン辞典</p>
+            <div>
+                <p>
+                    名前:
+                </p>
+                <p>
+                    自己紹介:
+                </p>
+                <p>
+                    技術と言語:
+                </p>
+            </div>
+        </section>
+
+        <!-- 調味料一覧セクション -->
+        <section class="spices">
+            <h2 class="spices__title">調味料一覧概要(ターメリック一覧のみ記入)</h2>
+            <!-- <div class="spices__grid"> -->
+                <!-- ターメリック -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">ターメリック</h3>
+                    <p class="spice-card__description">抗炎症作用があるスパイス。</p>
+                    <a href="detail-turmeric.html" class="spice-card__link">詳しく見る</a>
+                </article>
+            -->
+                <!-- シナモン -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">シナモン</h3>
+                    <p class="spice-card__description">血糖値の安定や抗菌作用に効果的。</p>
+                    <a href="detail-cinnamon.html" class="spice-card__link">詳しく見る</a>
+                </article> -->
+            
+                <!-- ショウガパウダー -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">ショウガパウダー</h3>
+                    <p class="spice-card__description">体を温め、免疫力を高めるスパイス。</p>
+                    <a href="detail-ginger.html" class="spice-card__link">詳しく見る</a>
+                </article> -->
+            <!-- </div> -->
+            
+            
+
+
+            <div class="container">
+                <!-- サイドバー -->
+                <aside class="sidebar">
+                    <h2 class="sidebar__title">調味料一覧概要</h2>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item" onclick="showDetail('turmeric')">ターメリック(9割記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('cinnamon')">シナモン(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">ショウガパウダー(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('Bonito')">カツオ(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">アマニオイル(未記入)</li>
+                    </ul>
+                </aside>
+            
+                <!-- メインコンテンツ -->
+                <main class="content">
+                    <div id="spice-detail" class="spice-detail">
+                        <h2 class="spice-detail__title">スパイスの詳細</h2>
+                        <p class="spice-detail__description">左のリストから選択してください。</p>
+                    </div>
+                </main>
+            </div>
+            
+
+        </section>
+
+        <!-- 栄養素(ビタミン)一覧セクション -->
+        <section class="vitamin">
+            <h2 class="vitamin__title">栄養素(ビタミン)一覧　　(未着手)</h2>
+            <!-- <div class="spices__grid"> -->
+                <!-- ターメリック -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">ターメリック</h3>
+                    <p class="spice-card__description">抗炎症作用があるスパイス。</p>
+                    <a href="detail-turmeric.html" class="spice-card__link">詳しく見る</a>
+                </article>
+            -->
+                <!-- シナモン -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">シナモン</h3>
+                    <p class="spice-card__description">血糖値の安定や抗菌作用に効果的。</p>
+                    <a href="detail-cinnamon.html" class="spice-card__link">詳しく見る</a>
+                </article> -->
+            
+                <!-- ショウガパウダー -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">ショウガパウダー</h3>
+                    <p class="spice-card__description">体を温め、免疫力を高めるスパイス。</p>
+                    <a href="detail-ginger.html" class="spice-card__link">詳しく見る</a>
+                </article> -->
+            <!-- </div> -->
+            
+            
+
+
+            <div class="container">
+                <!-- サイドバー -->
+                <aside class="sidebar">
+                    <h2 class="sidebar__title">栄養素(ビタミン)一覧</h2>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item" onclick="showDetail('turmeric-vitamin')">ターメリックの栄養素(ビタミン)　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('cinnamon-vitamin')">シナモンの栄養素(ビタミン)(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger-vitamin')">ショウガパウダーの栄養素(ビタミン)　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('bonito-vitamin')">カツオの栄養素(ビタミン)　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('flaxseed-oil-vitamin')">アマニオイルの栄養素(ビタミン)　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ergothioneine-vitamin')">エルゴチオネイン(菌活)(ひらたけ)　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ornithine-vitamin')">オルニチン(菌活)(ブナシメジ)　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('polyphenol-vitamin')">ポリフェノール　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('vitamin-a')">ビタミンA　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('vitamin-e')">ビタミンE　(３割記入)</li>
+
+                    </ul>
+                </aside>
+            
+                <!-- メインコンテンツ -->
+                <main class="content">
+                    <div id="vitamin-detail" class="vitamin-detail">
+                        <h2 class="vitamin-detail__title">栄養素(ビタミン)の詳細</h2>
+                        <p class="vitamin-detail__description">左のリストから選択してください。</p>
+                    </div>
+                </main>
+            </div>
+            
+
+        </section>
+
+        <!-- 素材一覧セクション -->
+        <section class="spices">
+            <h2 class="spices__title">素材一覧　　(未着手)</h2>
+            <!-- <div class="spices__grid"> -->
+                <!-- ターメリック -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">ターメリック</h3>
+                    <p class="spice-card__description">抗炎症作用があるスパイス。</p>
+                    <a href="detail-turmeric.html" class="spice-card__link">詳しく見る</a>
+                </article>
+            -->
+                <!-- シナモン -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">シナモン</h3>
+                    <p class="spice-card__description">血糖値の安定や抗菌作用に効果的。</p>
+                    <a href="detail-cinnamon.html" class="spice-card__link">詳しく見る</a>
+                </article> -->
+            
+                <!-- ショウガパウダー -->
+                <!-- <article class="spice-card">
+                    <h3 class="spice-card__name">ショウガパウダー</h3>
+                    <p class="spice-card__description">体を温め、免疫力を高めるスパイス。</p>
+                    <a href="detail-ginger.html" class="spice-card__link">詳しく見る</a>
+                </article> -->
+            <!-- </div> -->
+            
+            
+
+
+            <div class="container">
+                <!-- サイドバー -->
+                <aside class="sidebar">
+                    <h2 class="sidebar__title">元になる素材や原材料一覧</h2>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item" onclick="showDetail('turmeric')">ターメリックの元になる素材や原材料一覧　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('cinnamon')">シナモンの元になる素材や原材料一覧　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">ショウガパウダーの元になる素材や原材料一覧　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('Bonito')">カツオ素材の元になる素材や原材料一覧　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">アマニオイル素材の元になる素材や原材料一覧　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">きのこについて　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">DarkChocolate　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">ざくろ　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">アボカド　　(未記入)</li>
+                        <li class="sidebar__item" onclick="showDetail('ginger')">クルミ(ナッツ)　　(未記入)</li>
+
+                    </ul>
+                </aside>
+            
+                <!-- メインコンテンツ -->
+                <main class="content">
+                    <div id="spice-detail" class="spice-detail">
+                        <h2 class="spice-detail__title">元になる素材や原材料一覧の詳細について</h2>
+                        <p class="spice-detail__description">左のリストから選択してください。</p>
+                    </div>
+                </main>
+            </div>
+            
+
+        </section>
+
+
+
+
+        <!-- カレー・味噌汁・スープ特集の外枠 -->
+<section class="specials">
+    <div class="specials__container">
+        <!-- カレー特集 -->
+        <div class="specials__box specials__box--curry">
+            <a href="curry.html" class="cury" style="color: #32cd32;">
+            <h2 class="specials__title">カレー特集(着手開始)</h2>
+            <p class="specials__description">インド、タイ、日本カレーの違いを解説。</p>
+        </a>
+        </div>
+        <!-- 味噌汁特集 -->
+        <div class="specials__box specials__box--miso">
+            <a href="miso_soup.html" class="miso-soup" style="color: #32cd32;">
+            <h2 class="specials__title">味噌汁特集(着手開始)</h2>
+            <p class="specials__description">日本の伝統的な味噌汁の魅力を紹介。</p>
+        </a>
+        </div>
+        <!-- スープ特集 -->
+        <div class="specials__box specials__box--soup">
+            <a href="soup.html" class="soup" style="color: #32cd32;">
+            <h2 class="specials__title">スープ特集(仮)</h2>
+            <p class="specials__description">洋風・中華・和風スープのレシピを紹介。</p>
+        </a>
+        </div>
+    </div>
+</section>
+
+<div class="mode-selector">
+    <div class="dark-mode yellow-mode" onclick="setDarkMode('yellow')">Yellow Mode</div>
+    <div class="dark-mode green-mode" onclick="setDarkMode('green')">Green Mode</div>
+    <div class="light-mode" onclick="setLightMode()">☀ Light Mode</div>
+</div>
+
+<button class="top-button" onclick="scrollToTop()">⬆ Top</button>
+
+    </main>
+
+    <footer class="site__footer">
+        <p class="footer__text">© 2025 >私の調味料辞典. All rights reserved.</p>
+        <br>
+        <p><a href="another.html" class="another-page">
+            <p>別のポートフォリオリンクへ進む⇒(未遷移)</p>
+        </a></p>
+    </footer>
+    
+    
+    <style>
+        .another-page {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+    </style>
+
+    <script src="js/button.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDE6D6; /* 落ち着いたクリーム系 */
+    color: #4B2E1F; /* ダークブラウンで視認性UP */
+
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+
+    font-family: "Courier New", monospace; /* デジタル感のあるフォント */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+
+
+
+
+    /* 背景画像切り替え用 */
+    background-size: cover;   /* 画像を画面いっぱいに広げる */
+    background-position: center;  /* 画像を中央に配置 */
+    background-repeat: no-repeat;  /* 画像を繰り返さない */
+
+}
+
+
+/* ボックス・ボタン・ヘッダー・フッターのデジタル風スタイル */
+.box, .button, .header, .footer {
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ダークモード時に枠の色変更（JSで適用） */
+.dark-mode .box, .dark-mode .button, .dark-mode .header, .dark-mode .footer .section.hero{
+    border: 2px solid #32cd32;
+    box-shadow: 0 0 10px #32cd32;
+}
+
+
+/* レイアウト */
+.container {
+    display: flex;
+}
+
+
+
+/* サイドバー */
+.sidebar {
+    width: 250px;
+    background-color: #ffcc80;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar__item {
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: #ffb74d;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar__item:hover {
+    background-color: #ff9800;
+}
+
+
+/* メインコンテンツ */
+.content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.spice-detail {
+    background-color: #fbe9e7;
+    padding: 2rem;
+    border: 3px solid #8b4513;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 基本レイアウト */
+.site {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.site__header {
+    background-color: #ffcc00;
+    padding: 1rem;
+}
+
+.site__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__item {
+    font-size: 1.2rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #000;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #ffe680;
+    /* padding: 2rem 1rem; */
+    padding: 50px 20px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero__description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+/* ✅ カードデザイン */
+.card {
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* 調味料セクション */
+.section.spice {
+    background-color: #DBD2BE; /* ほんのり落ち着いたベージュ */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+
+/* 調味料一覧 */
+.spices {
+    padding: 2rem 1rem;
+}
+
+.spices__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.spices__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* カード（各調味料） */
+.spice-card {
+    background-color: #D6C7AE; /* 落ち着きのある濃いめのベージュ */
+    border: 2px solid #8B4513; /* 赤茶の枠線 */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.spice-card:hover {
+    transform: translateY(-5px);
+}
+
+.spice-card__name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.spice-card__description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.spice-card__details {
+    list-style: none;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+
+
+/* ////////////// */
+/* 栄養素（ビタミン）セクション */
+.section.vitamin {
+    background-color: #DBD2BE; /* ほんのり落ち着いたベージュ */
+    padding: 2rem;
+    border-radius: 10px;
+}
+.vitamin {
+    background-color: #DBD2BE; /* ほんのり落ち着いたベージュ */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+
+
+/* 栄養素（ビタミン一覧 */
+.vitamin {
+    padding: 2rem 1rem;
+}
+
+.vitamin__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.vitamin__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* カード（各栄養素（ビタミン） */
+.vitamin-card {
+    background-color: #D6C7AE; /* 落ち着きのある濃いめのベージュ */
+    border: 2px solid #8B4513; /* 赤茶の枠線 */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.vitamin-card:hover {
+    transform: translateY(-5px);
+}
+
+.vitamin-card__name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.vitamin-card__description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.vitamin-card__details {
+    list-style: none;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main.content {
+    background-color: #ede6d6; /* 落ち着きのある濃いめのベージュ */
+    padding: 1rem;
+}
+
+/* ボタン（アクセントカラー） */
+.button {
+    background-color: #C25E00; /* 深めのオレンジ */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* ✅ ボタン・フッター */
+.button, .footer {
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.specials {
+    padding: 20px;
+}
+
+.specials__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.specials__box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.specials__box--curry {
+    background-color: #f5d76e;
+}
+
+.specials__box--miso {
+    background-color: #d35400;
+}
+
+.specials__box--soup {
+    background-color: #3498db;
+}
+
+
+
+
+.mode-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.dark-mode, .light-mode {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #ffd700;
+}
+
+.green-mode {
+    background-color: #222;
+    color: #32cd32;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-mode:hover, .light-mode:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ✅ ダークモード時のカラー変更 */
+.dark-mode .hero,
+.dark-mode .card,
+.dark-mode .button,
+.dark-mode .footer,
+.dark-mode table {
+    border: 2px solid #32cd32;
+    box-shadow: 0 0 10px #32cd32;
+    background-color: #1a1a1a;
+}
+
+/* ✅ ダークモード時のリンクカラー */
+.dark-mode a {
+    color: #32cd32;
+}
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.top-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Footer */
+.site__footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+}

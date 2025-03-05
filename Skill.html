@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ--スキル</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+
+        .button {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            /* font-size: 16px; */
+            font-size: 32px;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            color: aliceblue;
+            margin: 10px;
+            padding: 30px;
+            text-decoration: none;
+
+
+            font-family: 'Muli', sans-serif;
+            /* background-color: #f4f4f4; */
+            background-color: #00274D;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .button:hover {
+            background: #004080;
+        }
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: var(--text-light);
+        }
+
+        :root {
+            --primary-color: #00274D;
+            --text-light: white;
+            --text-dark: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>私の現状スキル</h1>
+        <p>言語</p>
+        <div class="skills" id="skillsList"></div>
+    </div>
+
+    <div class="container">
+        <h1>経験</h1>
+        <div class="skills" id="skillsList">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>年数</h1>
+        <div class="skills" id="skillsList">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>作成、開発、構築経験？？</h1>
+        <div class="skills" id="skillsList">
+            <p></p>
+        </div>
+    </div>
+
+    <div>
+        <button class="button" ><a href="top.html" style="color: #f4f4f4; padding: 10px; text-decoration: none;">戻る</a></button>
+    </div>
+    <script>
+        const skills = ["HTML", "CSS", "JavaScript", "Java", "Python",];    // "TypeScript", "React", "Spring Boot", "PostgreSQL除く"
+        const skillsList = document.getElementById("skillsList");
+        
+        skills.forEach(skill => {
+            let div = document.createElement("div");
+            div.className = "skill";
+            div.textContent = skill;
+            skillsList.appendChild(div);
+        });
+    </script>
+</body>
+</html>
